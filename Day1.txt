@@ -44,7 +44,7 @@ https://github.com
 
 
 
-로컬 저장소 생성하기
+5. 로컬 저장소 생성하기
 
 컨트롤 + L : 화면 클리어
 pwd : 현재 디렉토리 경로를 표시
@@ -57,3 +57,77 @@ git init 명령어로 로컬 저장소를 생성
 
 * 폴더가 안보일 때
 ls -al
+
+6. 원하는 파일 생성하기
+README.md, index.html, style.css 파일을 생성
+
+7. 버전관리 파일 선택하기 
+git add README.md
+
+8. 버전관리 파일 커밋하기
+git commit -m "README.md를 추가했어요."
+
+* 아래 에러가 발생하는 경우
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'msi@DESKTOP-820U97L.(none)')
+
+💌 해결방법
+git config --global user.email "깃허브에 사용할 이메일주소"
+git config --global user.name "이름"
+
+9. 로그 확인하기
+git log
+
+10. 여러 파일을 선택하기
+git add .
+
+11. 여러 파일 커밋하기
+git commit -m "모든 파일 추가"
+
+12. 로그 확인하기
+git log
+
+13. 로컬 저장소에 github 저장소 주소 설정하기
+git remote add origin https://github.com/uiseong4313/frontend.git
+
+14. 만든 커밋을 github에 푸시하기
+git push -u origin master 
+
+
+원격 저장소(github)의 자료를 내 컴퓨터에 받아오기
+1. 디렉토리 이동
+cd C:\Users\msi\Desktop\Frontend\Clone
+
+2. 원격 저장소에서 자료를 복사해서 가져오기
+git clone https://github.com/uiseong4313/frontend.git (폴더 생성)
+git clone https://github.com/uiseong4313/frontend.git . (파일만 생성)
+
+3. 폴더 및 파일을 삭제 
+rm -rf Clone
+
+4. README.md와 index.html 파일을 수정
+
+5. git add .
+
+6. git commit -m "README.md, index.html 파일 수정"
+
+7. git push -u origin master
+
+다른 사람들과 협업하기 
+
+repository 선택 -> setting -> manage access -> 비밀번호 입력 -> invite a collaborators 버튼을 클릭 -> 상대방 이메일 또는 이름을 등록 -> 메일 확인!!
+
+
+GUI 깃 프로그램
+https://www.sourcetreeapp.com/
